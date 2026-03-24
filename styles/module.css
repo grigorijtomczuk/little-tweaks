@@ -1,0 +1,39 @@
+/* Quick Module Enable */
+
+.application#module-management search input[type="search"] {
+	flex: 1 0 12em;
+}
+
+.application#module-management search > .filter[data-filter="active"],
+.application#module-management search > .filter[data-filter="major"],
+.application#module-management search > .filter[data-filter="minor"],
+.application#module-management search > .filter[data-filter="match"],
+.application#module-management search > button.inline-control {
+	display: none;
+}
+
+/* Chat Media */
+
+.chat-media-image img {
+	width: 100%;
+}
+
+.chat-media-image img:hover {
+	box-shadow: none;
+}
+
+#chat-media-spinner {
+	display: none;
+}
+
+#chat-media-upload-image-hidden-input {
+	display: none;
+}
+
+#chat-media-upload-image {
+	display: none;
+}
+
+#sidebar #chat-media-upload-image {
+	display: block;
+}

@@ -3,5 +3,13 @@
 	"QUICKMODMANAGE.FilterMajor": "Критическое несоответствие",
 	"QUICKMODMANAGE.FilterMinor": "Незначительное несоответствие",
 	"QUICKMODMANAGE.FilterMatch": "Версия совпадает",
-	"QUICKMODMANAGE.ManifestMismatch": "Требуется ручная переустановка"
+	"QUICKMODMANAGE.ManifestMismatch": "Требуется ручная переустановка",
+
+	"chat-media.uploadButtonTitle": "Загрузить изображение",
+	"chat-media.unableToLoadImage": "Не удалось загрузить изображение",
+	"chat-media.uploadPermissions": "У вас нет прав на загрузку",
+	"chat-media.uploadLocation": "Место загрузки",
+	"chat-media.uploadLocationHint": "[Вступит в силу после обновления] Куда будут загружаться изображения",
+	"chat-media.uploadButton": "Кнопка загрузки",
+	"chat-media.uploadButtonHint": "[Вступит в силу после обновления] Показывать кнопку загрузки"
 }

@@ -2,23 +2,24 @@ import { CHAT_MEDIA_TWEAK_CLASS, MODULE_ID } from "./constants.js";
 
 export function chatMediaTweak() {
 	function onRenderChatMessage(message, html, messageData) {
-		const $images = html.find(".chat-media-image > img");
-		const $newImages = $images.clone(false);
+		html.find(".chat-media-image > img").each(function () {
+			const $original = $(this);
+			const $clone = $original.clone(false);
+			$original.replaceWith($clone);
 
-		$images.replaceWith($newImages);
-
-		$newImages.click(function (event) {
-			event.preventDefault();
-			const imagePopout = new ImagePopout({
-				src: $(this).attr("src"),
-				window: {
-					title: game.i18n.localize(
-						`${MODULE_ID}.image-popout-title`,
-					),
-				},
+			$clone.on("click", function (e) {
+				e.preventDefault();
+				const imagePopout = new ImagePopout({
+					src: $(this).attr("src"),
+					window: {
+						title: game.i18n.localize(
+							`${MODULE_ID}.image-popout-title`,
+						),
+					},
+				});
+				imagePopout.options.classes.push(CHAT_MEDIA_TWEAK_CLASS);
+				imagePopout.render(true);
 			});
-			imagePopout.options.classes.push(CHAT_MEDIA_TWEAK_CLASS);
-			imagePopout.render(true);
 		});
 	}
 
@@ -39,10 +40,12 @@ export function chatMediaTweak() {
 	}
 
 	Hooks.on("renderChatMessage", onRenderChatMessage);
-	Hooks.once("ready", removeOptionsFromImagePopoutHeader);
+	Hooks.once("ready", () => {
+		removeOptionsFromImagePopoutHeader();
+	});
 }
 
-export async function quickModuleEnableTranslation() {
+export async function applyTranslations() {
 	const response = await fetch(`modules/${MODULE_ID}/lang/tweak.ru.json`);
 	const translations = await response.json();
 

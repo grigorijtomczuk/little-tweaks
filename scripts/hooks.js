@@ -1,9 +1,10 @@
-import { chatMediaTweak, quickModuleEnableTranslation } from "./main.js";
+import { applyTranslations, chatMediaTweak } from "./main.js";
 
 import { MODULE_ID } from "./constants.js";
 
 Hooks.once("setup", () => {
 	chatMediaTweak();
+	applyTranslations();
 });
 
 Hooks.once("ready", () => {
@@ -13,6 +14,4 @@ Hooks.once("ready", () => {
 		);
 		return;
 	}
-
-	quickModuleEnableTranslation();
 });
