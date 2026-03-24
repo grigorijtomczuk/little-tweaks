@@ -11,5 +11,9 @@
 	"chat-media.uploadLocation": "Место загрузки",
 	"chat-media.uploadLocationHint": "[Вступит в силу после обновления] Куда будут загружаться изображения",
 	"chat-media.uploadButton": "Кнопка загрузки",
-	"chat-media.uploadButtonHint": "[Вступит в силу после обновления] Показывать кнопку загрузки"
+	"chat-media.uploadButtonHint": "[Вступит в силу после обновления] Показывать кнопку загрузки",
+
+	"MonksPlayerSettings.sync-settings.hint": "Сохранение настроек на этом клиенте обновит синхронизируемые настройки",
+	"MonksPlayerSettings.ignore-modules.name": "Игнорируемые модули",
+	"MonksPlayerSettings.ignore-modules.hint": "Модули, которые должны игнорироваться при синхронизации настроек"
 }
