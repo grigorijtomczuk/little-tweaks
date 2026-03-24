@@ -1,0 +1,7 @@
+{
+	"QUICKMODMANAGE.FilterRecent": "Недавно добавленные",
+	"QUICKMODMANAGE.FilterMajor": "Критическое несоответствие",
+	"QUICKMODMANAGE.FilterMinor": "Незначительное несоответствие",
+	"QUICKMODMANAGE.FilterMatch": "Версия совпадает",
+	"QUICKMODMANAGE.ManifestMismatch": "Требуется ручная переустановка"
+}
