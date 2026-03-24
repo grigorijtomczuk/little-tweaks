@@ -37,3 +37,15 @@
 #sidebar #chat-media-upload-image {
 	display: block;
 }
+
+/* Chat Commander */
+
+#autocomplete-menu {
+	position: absolute;
+	bottom: 175px;
+	inset-inline: 0;
+}
+
+#chat #autocomplete-menu {
+	bottom: 192px;
+}
