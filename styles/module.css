@@ -35,7 +35,7 @@
 }
 
 #sidebar #chat-media-upload-image {
-	display: block;
+	display: flex;
 }
 
 /* Chat Commander */
@@ -48,4 +48,24 @@
 
 #chat #autocomplete-menu {
 	bottom: 192px;
+}
+
+/* Monk's Little Details */
+
+body.change-chat .chat-sidebar .chat-scroll {
+	mask-image: none !important;
+}
+
+body.change-chat .chat-sidebar .chat-scroll.overflowed {
+	mask-image: linear-gradient(to bottom, transparent 0%, black 5%) !important;
+}
+
+body.change-chat .chat-sidebar .chat-scroll.scrolled {
+	mask-image: linear-gradient(
+		to bottom,
+		transparent 0%,
+		black 5%,
+		black 95%,
+		transparent 100%
+	) !important;
 }
